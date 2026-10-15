@@ -15,13 +15,13 @@ nav_order: 5
 hero_eyebrow: "THIS COMMUNITY IS YOURS"
 hero_title: "Share what you have learned."
 hero_lead: "Have you tried Mistral AI, evaluated an alternative or built a demo? Your experience can help others."
-primary_label: "Open a GitHub proposal"
-primary_url: "https://github.com/mistralboreal/mistralboreal.github.io/issues/new"
+primary_label: "Contribute on GitHub"
+primary_url: "https://github.com/mistralboreal/mistralboreal.github.io/pulls"
 ---
 
 ## Suggest content or a meetup
 
-1. Open a [proposal on GitHub](https://github.com/mistralboreal/mistralboreal.github.io/issues/new).
+1. Prepare a contribution and open a [Pull Request on GitHub](https://github.com/mistralboreal/mistralboreal.github.io/pulls).
 2. Identify the contribution type: article, training, demonstration or meetup.
 3. Describe the intended audience and goals, and for comparisons, the criteria used.
 4. Supply Canadian French (FR-CA) and Canadian English (EN-CA) versions, or request translation support.
