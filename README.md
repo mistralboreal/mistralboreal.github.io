@@ -1,120 +1,76 @@
-<p align="center">
-  <img src="src/assets/branding/logo-full.svg" alt="Velocity" width="370" />
-</p>
+# Mistral Boréal — Astro + Velocity + OKF
 
-<p align="center">
-  <strong>Astro 6 Boilerplate</strong> — A production-ready starter template built on Astro 6 and Tailwind CSS v4.
-</p>
+[FR-CA](https://mistralboreal.github.io/) · [EN-CA](https://mistralboreal.github.io/en-ca/)
 
-<p align="center">
-  <a href="https://astro.build"><img src="https://img.shields.io/badge/Astro-6.0-bc52ee?logo=astro&logoColor=white" alt="Astro" /></a>
-  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind-4.0-38bdf8?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /></a>
-  <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.7-3178c6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e" alt="License" /></a>
-</p>
+Communauté canadienne indépendante et gratuite pour découvrir, pratiquer et comparer les usages des produits Mistral AI. One free meetup every month, alternating online and in person in Montréal / Québec at AFI Expertise venues when confirmed. The project is not affiliated with Mistral AI.
 
----
+## Architecture
 
-## What's Included
+This repository began from the Southwell Media Velocity Astro starter. The public site preserves Astro 6, Velocity's Tailwind CSS v4 design tokens, fonts and reusable UI components. It adopts the editorial architecture and bilingual OKF content approach of [GUM365](https://github.com/gum365/gum365.github.io) without copying GUM365's brand or Microsoft 365 event integration.
 
-- **57 components** across 7 categories — all accessible, typed, and dark-mode ready
-- **Design token system** with OKLCH colors, fluid typography, and two built-in themes
-- **SEO toolkit** — meta tags, JSON-LD, sitemap, robots.txt, and auto-generated OG images
-- **Content collections** — type-safe blog, pages, authors, and FAQs with Zod validation
-- **API routes** — contact form and newsletter endpoints with validation
-- **React islands** — optional client-side interactivity where needed
-- **i18n-ready** — locale-aware schemas; full i18n via the [CLI](https://github.com/southwellmedia/create-velocity-astro)
+    knowledge/okf/
+      fr-CA/
+        pages/       # six navigation pages
+        articles/    # blog and comparisons
+        events/      # meetup invitations
+        training/    # learning paths and Mistral AI source links
+      en-CA/
+        pages/
+        articles/
+        events/
+        training/
+    src/
+      content.config.ts                 # Astro content schemas
+      lib/okf.ts                        # locale, URL and pairing helpers
+      components/community/ContentView.astro
+      layouts/CommunityLayout.astro
+      styles/community.css              # branded Velocity styling
+      pages/[...slug].astro             # all non-home routes
+      pages/index.astro                 # FR-CA home
+      pages/en-ca/index.astro           # EN-CA home
+      pages/rss.xml.ts                  # FR RSS
+      pages/en-ca/rss.xml.ts            # EN RSS
+    scripts/validate-okf.mjs
+    .github/workflows/deploy.yml
 
----
+**Every content item must exist in FR-CA and EN-CA**, share translation_key and link to its corresponding localized URL. FR-CA is the editorial source; EN-CA is a Canadian English translation. The CI script rejects missing pairs, slug collisions, invalid translation paths and unconfirmed-event dates.
 
-## Quick Start
+The initial EN-CA translations are published but marked translation_status=draft pending human language review. An editor should change this to reviewed or validated only after reviewing them; the site itself is already bilingual.
 
-```bash
-# Clone
-git clone https://github.com/southwellmedia/velocity.git my-project
-cd my-project
+## Local development
 
-# Install (requires Node 22.12+)
-pnpm install
+Node.js 22 or newer, pnpm 9.
 
-# Configure
-cp .env.example .env
+    corepack enable
+    corepack prepare pnpm@9 --activate
+    pnpm install --frozen-lockfile
+    node scripts/validate-okf.mjs
+    pnpm run check
+    pnpm run build
+    pnpm run dev
 
-# Develop
-pnpm dev
-```
+Astro outputs a static site into dist/. No server API, accounts, cookies for analytics, or registration database are required. Theme choice alone is saved locally. There are no placeholder mailing-list or contact forms.
 
-Or use the CLI for the full experience including i18n:
+## Publishing
 
-```bash
-pnpm create velocity-astro my-project
-```
+GitHub Actions runs pairing validation, Astro type checks and the static build on PRs and pushes. On a push to main it additionally uploads dist/ and deploys to GitHub Pages.
 
----
+Repository administrator one-time setting:
 
-## Commands
+**Settings → Pages → Build and deployment → Source: GitHub Actions**
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start dev server |
-| `pnpm build` | Production build |
-| `pnpm preview` | Preview production build |
-| `pnpm check` | Astro type checker |
-| `pnpm lint` | ESLint |
-| `pnpm format` | Prettier |
-| `pnpm test` | Vitest |
-| `pnpm test:e2e` | Playwright E2E |
+Site address: https://mistralboreal.github.io/
 
----
+A successful Actions deploy and the Pages setting are both necessary before the public URL works. Event RSVP URLs are added to each content entry only when real registrations open.
 
-## Project Structure
+## Editorial workflow
 
-```
-src/
-  components/
-    ui/           # 31 UI components (form, data-display, feedback, overlay, etc.)
-    patterns/     # 7 composed patterns (ContactForm, SearchInput, StatCard, etc.)
-    layout/       # Header, Footer, ThemeToggle, Analytics
-    blog/         # ArticleHero, BlogCard, ShareButtons, RelatedPosts
-    landing/      # Credibility, TechStack, FeatureTabs, and more
-    seo/          # SEO, JsonLd, Breadcrumbs
-  content/        # Blog posts, authors, FAQs
-  config/         # Site and navigation config
-  styles/         # Global CSS and design tokens
-  pages/          # Routes, API endpoints, OG image generation
-```
+See [knowledge/okf/README.md](knowledge/okf/README.md) and [docs/editorial.md](docs/editorial.md). Update both languages and source links together, open a PR, and check the Actions result.
 
----
+## Official resources and trademarks
 
-## Configuration
+Learning paths link to [Mistral AI documentation](https://docs.mistral.ai/) and the [first API request quickstart](https://docs.mistral.ai/getting-started/quickstarts/developer/first-api-request). Their copyrights and licences remain with their authors. Mistral Boréal is independent and uses its own wordmark/MB favicon rather than claiming an official Mistral AI affiliation.
 
-**Site config**: `src/config/site.config.ts` — name, description, URL, social links
+## Licence
 
-**Design tokens**: `src/styles/tokens/` — colors, typography, spacing
-
-**Themes**: `src/styles/themes/` — switch between `default` and `midnight`, or create your own
-
-**Environment**: `.env` — see `.env.example` for available variables
-
-View all components at `/components` in development.
-
----
-
-## Contributing
-
-1. Fork the repo
-2. Create a feature branch
-3. Ensure `pnpm lint` and `pnpm check` pass
-4. Open a PR
-
----
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
-
----
-
-**Links**: [Docs](https://github.com/southwellmedia/velocity-docs) | [CLI](https://github.com/southwellmedia/create-velocity-astro) | [Astro](https://docs.astro.build) | [Tailwind v4](https://tailwindcss.com/docs)
-
-**Built by [Southwell Media](https://southwellmedia.com)**
+Original Velocity template license is preserved in LICENSE. Contributions must respect licences on third-party educational resources.

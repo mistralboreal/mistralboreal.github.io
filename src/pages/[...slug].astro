@@ -1,0 +1,16 @@
+---
+import ContentView from '../components/community/ContentView.astro';
+import { getOKF } from '../lib/okf';
+
+export async function getStaticPaths() {
+  const entries = await getOKF();
+  return entries
+    .filter((entry) => entry.data.translation_key !== 'home')
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: { entry, entries },
+    }));
+}
+const { entry, entries } = Astro.props;
+---
+<ContentView entry={entry} entries={entries} />
