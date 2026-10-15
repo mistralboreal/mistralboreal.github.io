@@ -1,11 +1,13 @@
-name: Build and deploy Mistral Boréal
+name: Publish Mistral Boréal to GitHub Pages
 
 on:
-  workflow_dispatch:
-  pull_request:
-    branches: [main]
   push:
-    branches: [main]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,47 +15,70 @@ permissions:
   id-token: write
 
 concurrency:
-  group: mistral-boreal-pages
+  group: mistral-boreal-github-pages
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Validate and build Astro
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
           version: 9
-      - uses: actions/setup-node@v4
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22'
           cache: pnpm
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Validate FR-CA / EN-CA editorial pairs
+
+      - name: Validate FR-CA / EN-CA OKF content
         run: node scripts/validate-okf.mjs
-      - name: Astro type check
+
+      - name: Check Astro and TypeScript
         run: pnpm run check
-      - name: Build static website
+
+      - name: Generate static website
         run: pnpm run build
         env:
           SITE_URL: https://mistralboreal.github.io
-      - name: Configure Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+      - name: Verify French and English entry points
+        run: |
+          test -s dist/index.html
+          test -s dist/en-ca/index.html
+          test -s dist/rencontres/index.html
+          test -s dist/en-ca/events/index.html
+          echo 'All required FR-CA and EN-CA entry points exist.'
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-      - name: Upload site
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+      - name: Upload static site for GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    name: Publish site
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: https://mistralboreal.github.io
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Publish to GitHub Pages
+      - name: Deploy website to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
