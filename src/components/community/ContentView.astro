@@ -1,0 +1,138 @@
+---
+import { render } from 'astro:content';
+import CommunityLayout from '../../layouts/CommunityLayout.astro';
+import { alternateFor, entriesFor, hrefFor, navigationFor, type OKFEntry } from '../../lib/okf';
+
+interface Props {
+  entry: OKFEntry;
+  entries: OKFEntry[];
+}
+const { entry, entries } = Astro.props;
+const d = entry.data;
+const en = d.language === 'en-CA';
+const alternate = alternateFor(entry, entries);
+const currentHref = hrefFor(entry);
+const nav = navigationFor(d.language, entries);
+const { Content } = await render(entry);
+const isHome = d.type === 'page' && d.translation_key === 'home';
+const isEvents = d.type === 'page' && d.translation_key === 'events';
+const isArticles = d.type === 'page' && d.translation_key === 'articles';
+const isTraining = d.type === 'page' && d.translation_key === 'training';
+const articles = entriesFor('article', d.language, entries);
+const events = entriesFor('event', d.language, entries).filter((item) => item.data.event_status !== 'cancelled');
+const training = entriesFor('training', d.language, entries);
+const featured = isArticles ? articles : isEvents ? events : isTraining ? training : [];
+const datePending = en ? 'Date and registration to be announced' : 'Date et inscription à annoncer';
+---
+<CommunityLayout
+  title={d.title}
+  description={d.description}
+  language={d.language}
+  currentHref={currentHref}
+  alternateHref={hrefFor(alternate)}
+  nav={nav}
+  contentType={d.type}
+>
+  <section class="mb-hero">
+    <div class="mb-hero-grid" aria-hidden="true"></div>
+    <div class="mb-hero-glow" aria-hidden="true"></div>
+    <div class="mb-container mb-hero-inner">
+      <div class="mb-hero-copy">
+        <p class="mb-eyebrow">{d.hero_eyebrow || 'Mistral Boréal · Canada'}</p>
+        <h1>{d.hero_title || d.title}</h1>
+        <p class="mb-lead">{d.hero_lead || d.description}</p>
+        {(d.primary_url || d.secondary_url) && (
+          <div class="mb-hero-actions">
+            {d.primary_url && d.primary_label && <a class="mb-button mb-button-primary" href={d.primary_url}>{d.primary_label} <span aria-hidden="true">↗</span></a>}
+            {d.secondary_url && d.secondary_label && <a class="mb-button mb-button-secondary" href={d.secondary_url}>{d.secondary_label} <span aria-hidden="true">→</span></a>}
+          </div>
+        )}
+      </div>
+      {isHome && (
+        <div class="mb-hero-aside">
+          <span class="mb-aside-kicker">{en ? 'OUR RHYTHM' : 'NOTRE RYTHME'}</span>
+          <strong>{en ? 'One gathering, every month.' : 'Un rendez-vous chaque mois.'}</strong>
+          <ol class="mb-rhythm">
+            <li><span>01</span>{en ? 'Online' : 'Virtuel'}</li>
+            <li><span>02</span>Montréal <small>{en ? 'In person' : 'Présentiel'}</small></li>
+            <li><span>03</span>{en ? 'Online' : 'Virtuel'}</li>
+            <li><span>04</span>Québec <small>{en ? 'In person' : 'Présentiel'}</small></li>
+          </ol>
+          <p>{en ? 'Illustrative four-meeting cycle; dates and venues are announced separately.' : 'Cycle illustratif de quatre rencontres; les dates et locaux sont annoncés séparément.'}</p>
+        </div>
+      )}
+    </div>
+  </section>
+  {isHome && (
+    <section class="mb-container mb-section">
+      <p class="mb-section-kicker">{en ? 'EXPLORE' : 'DÉCOUVRIR'}</p>
+      <h2>{en ? 'Learn together. Build real-world skills.' : 'Apprendre ensemble. Développer des usages concrets.'}</h2>
+      <div class="mb-card-grid">
+        <a class="mb-card" href={en ? '/en-ca/events/' : '/rencontres/'}>
+          <span class="mb-card-index">{en ? '01 / COMMUNITY' : '01 / COMMUNAUTÉ'}</span>
+          <h3>{en ? 'Monthly meetups' : 'Rencontres mensuelles'}</h3>
+          <p>{en ? 'Free online sessions and in-person gatherings alternating between Montréal and Québec.' : 'Des sessions gratuites en ligne et des rencontres en personne à Montréal et à Québec, en alternance.'}</p>
+          <span class="mb-card-cta">{en ? 'Explore meetups →' : 'Voir les rencontres →'}</span>
+        </a>
+        <a class="mb-card" href={en ? '/en-ca/articles/' : '/articles/'}>
+          <span class="mb-card-index">{en ? '02 / EXPERIENCE' : '02 / EXPÉRIENCE'}</span>
+          <h3>{en ? 'Articles and use cases' : 'Articles et cas d’usage'}</h3>
+          <p>{en ? 'Compare Mistral AI with other options using actual lessons, demos and transparent criteria.' : 'Comparer Mistral AI à d’autres options à partir de retours d’expérience et de critères transparents.'}</p>
+          <span class="mb-card-cta">{en ? 'Read articles →' : 'Lire les articles →'}</span>
+        </a>
+        <a class="mb-card" href={en ? '/en-ca/learning/' : '/formation/'}>
+          <span class="mb-card-index">{en ? '03 / LEARNING' : '03 / FORMATION'}</span>
+          <h3>{en ? 'Training resources' : 'Ressources de formation'}</h3>
+          <p>{en ? 'Guided paths linked to Mistral AI’s official documentation and original community explanations.' : 'Des parcours qui pointent vers la documentation officielle de Mistral AI et nos explications.'}</p>
+          <span class="mb-card-cta">{en ? 'Start learning →' : 'Commencer à apprendre →'}</span>
+        </a>
+      </div>
+    </section>
+  )}
+  <section class="mb-container mb-section mb-reading">
+    <div class="mb-prose"><Content /></div>
+    {d.type === 'event' && (
+      <aside class="mb-info">
+        <h2>{en ? 'Practical details' : 'Informations pratiques'}</h2>
+        <p><strong>{en ? 'Status:' : 'Statut :'}</strong> {d.event_status === 'confirmed' ? (en ? 'Confirmed' : 'Confirmé') : (en ? 'Planning' : 'En préparation')}</p>
+        <p>{d.event_date || datePending}</p>
+        {d.registration_url && <a class="mb-button mb-button-primary" href={d.registration_url}>{en ? 'Register for free' : 'S’inscrire gratuitement'} ↗</a>}
+        {!d.registration_url && <p>{en ? 'There is no registration link yet. No booking is currently open.' : 'Aucun lien d’inscription n’est encore disponible.'}</p>}
+      </aside>
+    )}
+    {d.type === 'training' && d.source_url && (
+      <aside class="mb-info">
+        <h2>{en ? 'Official source' : 'Source officielle'}</h2>
+        <p>{en ? 'The linked material is published and maintained by Mistral AI. Follow the source for updates and licensing terms.' : 'Le matériel lié est publié et maintenu par Mistral AI. Consultez la source pour les mises à jour et les conditions de réutilisation.'}</p>
+        <a class="mb-button mb-button-primary" href={d.source_url} target="_blank" rel="noopener noreferrer">{en ? 'Open Mistral AI documentation' : 'Ouvrir la documentation Mistral AI'} ↗</a>
+      </aside>
+    )}
+  </section>
+  {(isEvents || isArticles || isTraining) && (
+    <section class="mb-container mb-section mb-collection">
+      <p class="mb-section-kicker">{en ? 'BROWSE THE COLLECTION' : 'EXPLORER LA COLLECTION'}</p>
+      <h2>{isEvents ? (en ? 'Meetups and invitations' : 'Rencontres et invitations') : isArticles ? (en ? 'Latest articles' : 'Articles récents') : (en ? 'Learning paths' : 'Parcours de formation')}</h2>
+      <div class="mb-card-grid">
+        {featured.map((item) => (
+          <a class="mb-card" href={hrefFor(item)}>
+            <span class="mb-card-index">{item.data.type.toUpperCase()} {item.data.event_status === 'planning' ? '· ' + (en ? 'PLANNING' : 'EN PRÉPARATION') : ''}</span>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.description}</p>
+            <span class="mb-card-cta">{en ? 'Read more →' : 'En savoir plus →'}</span>
+          </a>
+        ))}
+        {featured.length === 0 && <p>{en ? 'New content is being prepared.' : 'De nouveaux contenus sont en préparation.'}</p>}
+      </div>
+    </section>
+  )}
+  {(isHome || isEvents) && (
+    <section class="mb-container mb-last-call">
+      <div>
+        <p class="mb-section-kicker">{en ? 'OPEN COMMUNITY' : 'COMMUNAUTÉ OUVERTE'}</p>
+        <h2>{en ? 'Have a use case worth sharing?' : 'Un cas d’usage à partager?'}</h2>
+        <p>{en ? 'The stage is open to practitioners, developers, trainers and curious people. Everyone is welcome, no fees.' : 'La parole est ouverte aux praticiens, développeurs, formateurs et curieux. Tout le monde est bienvenu, sans frais.'}</p>
+      </div>
+      <a class="mb-button mb-button-primary" href={en ? '/en-ca/contribute/' : '/contribuer/'}>{en ? 'Propose a topic' : 'Proposer un sujet'} →</a>
+    </section>
+  )}
+</CommunityLayout>

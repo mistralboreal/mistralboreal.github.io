@@ -5,8 +5,10 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://example.com',
-
+  site: process.env.SITE_URL || 'https://mistralboreal.github.io',
+  base: '/',
+  output: 'static',
+  trailingSlash: 'always',
   env: {
     schema: {
       SITE_URL: envField.string({ context: 'server', access: 'public', optional: true }),
@@ -21,30 +23,9 @@ export default defineConfig({
       PUBLIC_PRIVACY_POLICY_URL: envField.string({ context: 'client', access: 'public', optional: true, default: '' }),
     },
   },
-
-  image: {
-    layout: 'constrained',
-  },
-
-  integrations: [
-    react(),
-    mdx(),
-    sitemap(),
-  ],
-
-  vite: {
-    plugins: [tailwindcss()],
-  },
-
-  security: {
-    checkOrigin: true,
-  },
-
-  markdown: {
-    shikiConfig: {
-      theme: 'github-dark',
-      wrap: true,
-    },
-  },
-
+  image: { layout: 'constrained' },
+  integrations: [react(), mdx(), sitemap()],
+  vite: { plugins: [tailwindcss()] },
+  security: { checkOrigin: true },
+  markdown: { shikiConfig: { theme: 'github-dark', wrap: true } },
 });

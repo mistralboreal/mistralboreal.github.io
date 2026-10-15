@@ -1,0 +1,8 @@
+---
+import ContentView from '../../components/community/ContentView.astro';
+import { getOKF } from '../../lib/okf';
+const entries = await getOKF();
+const entry = entries.find((e) => e.data.translation_key === 'home' && e.data.language === 'en-CA');
+if (!entry) throw new Error('English home entry missing in OKF.');
+---
+<ContentView entry={entry} entries={entries} />
