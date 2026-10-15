@@ -14,13 +14,13 @@ nav_order: 5
 hero_eyebrow: "LA COMMUNAUTÉ, C’EST VOUS"
 hero_title: "Partagez ce que vous avez appris."
 hero_lead: "Vous avez testé Mistral AI, évalué une solution de rechange ou préparé une démo? Votre expérience peut aider les autres."
-primary_label: "Ouvrir une proposition sur GitHub"
-primary_url: "https://github.com/mistralboreal/mistralboreal.github.io/issues/new"
+primary_label: "Contribuer sur GitHub"
+primary_url: "https://github.com/mistralboreal/mistralboreal.github.io/pulls"
 ---
 
 ## Proposer un contenu ou une rencontre
 
-1. Ouvrez une [proposition sur GitHub](https://github.com/mistralboreal/mistralboreal.github.io/issues/new).
+1. Préparez une contribution et ouvrez une [Pull Request sur GitHub](https://github.com/mistralboreal/mistralboreal.github.io/pulls).
 2. Précisez le type de contribution : article, formation, démonstration ou rencontre.
 3. Présentez le public visé, les objectifs et, pour une comparaison, les critères utilisés.
 4. Proposez la version française (FR-CA) et anglaise (EN-CA), ou demandez un appui à la traduction.
