@@ -37,3 +37,15 @@ Parce que l’adoption de l’IA demande plus que des annonces de produits. Elle
 ## Comment contribuer?
 
 Proposez une démonstration, un retour d’expérience, un article, une activité de formation ou une aide à la traduction sur la page [Contribuer](/contribuer/).
+
+## Notre statut auprès de Mistral AI
+
+**Nous sommes indépendants et ne sommes pas, à ce jour, une communauté officielle de Mistral AI.** Nous ne revendiquons ni accréditation, ni partenariat, ni commandite. Notre ambition est de construire suffisamment de valeur et de confiance pour **espérer une reconnaissance officielle à l’avenir**, sous réserve d’une décision de Mistral AI.
+
+Cette indépendance permet aussi de traiter librement les comparaisons avec d’autres technologies. Nos [informations sur les produits Mistral AI](/ecosysteme/) sont sourcées depuis la documentation du fournisseur.
+
+## Comment ce site est maintenu
+
+Le code et les contenus sont versionnés sur GitHub et publiés par GitHub Actions. Les premières versions ont été produites avec l’aide de ChatGPT. **Nous préparons maintenant la migration des tâches de rédaction vers Vibe Work (anciennement Le Chat) et du travail sur le code vers Vibe Code.** Ce processus est encore en transition : nous ne prétendons pas que tout le site est déjà maintenu par ces outils.
+
+Notre [guide et kit open source](/notre-modele/) expliquent la méthode à d’autres groupes d’usagers.

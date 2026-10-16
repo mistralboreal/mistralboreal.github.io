@@ -33,3 +33,7 @@ Avant de soumettre une contribution, lancer :
 4. Les documents officiels de Mistral AI doivent être liés et attribués; ne pas les republier sans droits de réutilisation.
 5. Les comparaisons avec d’autres technologies restent factuelles et contextualisées.
 6. Aucune clé API ou donnée personnelle dans les contenus publics.
+
+## Navigation évolutive et pages masquées
+
+Le champ facultatif `nav_visible: false` retire une page du **menu seulement**, sans supprimer son URL ni sa paire de traduction. Pour l'instant la bibliothèque « Formation / Learning » est disponible en lien direct mais cachée de la navigation principale. Les pages « Écosystème » et « Notre modèle » restent visibles dans le menu.

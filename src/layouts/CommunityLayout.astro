@@ -75,18 +75,24 @@ const canonical = new URL(currentHref, Astro.site).toString();
         </div>
       </div>
     </header>
+    <div class="mb-trust-note">
+      <div class="mb-container">
+        <span>{en ? 'Independent Mistral AI user initiative — not officially recognized or endorsed. We hope to earn that recognition in the future.' : 'Initiative d’usagers Mistral AI indépendante — non officiellement reconnue ni soutenue. Nous espérons obtenir cette reconnaissance un jour.'}</span>
+        <a href={en ? '/en-ca/community/' : '/communaute/'}>{en ? 'Our status →' : 'Notre statut →'}</a>
+      </div>
+    </div>
     <main id="contenu"><slot /></main>
     <footer class="mb-footer">
       <div class="mb-container mb-footer-inner">
         <div>
           <div class="mb-footer-brand">Mistral Boréal</div>
           <p>{en ? 'A free, independent, bilingual Canadian user community.' : 'Une communauté canadienne d’usagers, indépendante, bilingue et gratuite.'}</p>
-          <small>{en ? 'Not affiliated with or endorsed by Mistral AI. Mistral AI trademarks belong to their owners.' : 'Sans affiliation ni soutien officiel de Mistral AI. Les marques Mistral AI appartiennent à leurs propriétaires.'}</small>
+          <small>{en ? 'Independent, not currently officially recognized or endorsed by Mistral AI. We hope to earn recognition in the future. Third-party trademarks belong to their owners.' : 'Initiative indépendante, actuellement non reconnue officiellement ni soutenue par Mistral AI. Nous espérons obtenir cette reconnaissance un jour. Les marques tierces appartiennent à leurs propriétaires.'}</small>
         </div>
         <div class="mb-footer-links">
           <a href="https://github.com/mistralboreal/mistralboreal.github.io" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           <a href={en ? '/en-ca/contribute/' : '/contribuer/'}>{en ? 'Contribute' : 'Contribuer'}</a>
-          <a href={en ? '/en-ca/learning/' : '/formation/'}>{en ? 'Learning' : 'Formation'}</a>
+          <a href={en ? '/en-ca/blueprint/' : '/notre-modele/'}>{en ? 'Our blueprint' : 'Notre modèle'}</a>
         </div>
       </div>
     </footer>

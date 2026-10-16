@@ -1,11 +1,16 @@
 # Mistral Boréal
-Independent, free, fully bilingual (fr-CA and en-CA) Canadian Mistral AI user community; not an official Mistral AI website.
+Independent, free, fully bilingual (fr-CA and en-CA) Canadian Mistral AI user community; not currently an officially recognized Mistral AI community, but hopes to earn recognition someday.
 
 FR: https://mistralboreal.github.io/
 EN: https://mistralboreal.github.io/en-ca/
 Meetups: https://mistralboreal.github.io/rencontres/
 Articles: https://mistralboreal.github.io/articles/
-Learning: https://mistralboreal.github.io/formation/
+Official Mistral AI ecosystem guide: https://mistralboreal.github.io/ecosysteme/
+Open community blueprint: https://mistralboreal.github.io/notre-modele/
+Downloadable bilingual blueprint kit: https://mistralboreal.github.io/downloads/mistral-boreal-community-blueprint.zip
+Learning archive (not in navigation): https://mistralboreal.github.io/formation/
 Source and contributions: https://github.com/mistralboreal/mistralboreal.github.io
 
 Editorial source: knowledge/okf, paired by translation_key. Meetups without confirmed dates must not be described as booked or open for registration. Training links lead to Mistral AI's own documentation.
+
+Maintenance provenance: initial site built with ChatGPT assistance; transition planned to Mistral Vibe Work (formerly Le Chat) and Vibe Code. Not yet exclusively operated with Mistral AI tools.

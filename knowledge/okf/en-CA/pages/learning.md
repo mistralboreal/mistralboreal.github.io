@@ -12,6 +12,7 @@ updated: "2026-10-15"
 translation_of: "../../fr-CA/pages/formation.md"
 nav_label: "Learning"
 nav_order: 4
+nav_visible: false
 hero_eyebrow: "LEARN · EXPLORE · PRACTICE"
 hero_title: "Learn Mistral AI, one use case at a time."
 hero_lead: "Progressive learning paths for beginners and practitioners, with explicit links to the official Mistral AI resources."
