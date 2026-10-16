@@ -27,7 +27,9 @@ const canonical = new URL(currentHref, Astro.site).toString();
     <meta name="theme-color" content="#ed5929" />
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/branding/mistral-boreal-logo.png" type="image/png" sizes="400x400" />
+    <link rel="apple-touch-icon" href="/branding/mistral-boreal-logo.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="fr-CA" href={new URL(frHref, Astro.site).toString()} />
     <link rel="alternate" hreflang="en-CA" href={new URL(enHref, Astro.site).toString()} />
@@ -55,7 +57,7 @@ const canonical = new URL(currentHref, Astro.site).toString();
     <header class="mb-header">
       <div class="mb-container mb-header-inner">
         <a class="mb-brand" href={en ? '/en-ca/' : '/'} aria-label={en ? 'Mistral Boreal — home' : 'Mistral Boréal — accueil'}>
-          <span class="mb-brand-mark" aria-hidden="true">MB</span>
+          <img class="mb-brand-logo" src="/branding/mistral-boreal-logo.png" alt="" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
           <span class="mb-brand-text">Mistral <strong>Boréal</strong></span>
         </a>
         <nav class="mb-navigation" aria-label={en ? 'Main navigation' : 'Navigation principale'}>
