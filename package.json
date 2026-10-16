@@ -24,7 +24,7 @@
   "homepage": "https://mistralboreal.github.io/",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/build-blueprint-zip.mjs && astro build",
+    "build": "node scripts/prepare-brand-logo.mjs && node scripts/build-blueprint-zip.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",

@@ -60,6 +60,7 @@ jobs:
 
       - name: Verify French and English entry points
         run: |
+          test -s dist/branding/mistral-boreal-logo.png
           test -s dist/index.html
           test -s dist/en-ca/index.html
           test -s dist/rencontres/index.html

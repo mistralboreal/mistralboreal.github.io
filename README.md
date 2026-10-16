@@ -88,3 +88,11 @@ Mistral Boréal adopte un **modèle de travail fondé sur l'écosystème Mistral
 La proposition de logo castor / feuille d'érable, son kit de marque, son livre de marque et les SVG de travail sont conservés sous `knowledge/okf/internal/branding/`. Ils **ne sont pas intégrés au site Astro ni aux ressources téléchargeables du site**. Le déploiement vérifie cette séparation.
 
 Le dépôt GitHub est public : le terme « internal » signifie ici **non publié sur le site**, et non **confidentiel**. Toute diffusion sur le site ou changement de favicon nécessitera une approbation distincte.
+
+## Identité du site — logo officiel de la communauté
+
+Le site utilise désormais le **castor pixellisé avec feuille d’érable** fourni par la communauté, en conservant le libellé « Mistral Boréal » dans l’en-tête. La même image transparente est utilisée sur fond clair, sur fond sombre et comme favicon PNG.
+
+La source de travail est un **WebP sans perte, parfaitement identique pixel par pixel** à l’image RGBA originale 400 × 400. Elle est enregistrée par segments Base64 sous `assets/brand-logo-source/` pour préserver intégralement les données avec l’interface de contribution. `scripts/prepare-brand-logo.mjs` contrôle les sommes SHA-256, vérifie les pixels RGBA après décodage avec Sharp puis génère `public/branding/mistral-boreal-logo.png` à chaque build. **Aucune retouche ou conversion avec perte n’est appliquée.** Le favicon et le logo partagent le même PNG généré; ne pas employer les anciens SVG de démonstration pour la marque publique.
+
+Ce choix de logo ne modifie pas notre statut de communauté indépendante de Mistral AI.

@@ -14,7 +14,7 @@ export interface SiteConfig {
   verification?: { google?: string; bing?: string };
   branding: {
     logo: { alt: string };
-    favicon: { svg: string };
+    favicon: { png: string };
     colors: { themeColor: string; backgroundColor: string };
   };
 }
@@ -23,14 +23,14 @@ const siteConfig: SiteConfig = {
   name: 'Mistral Boréal',
   description: 'Communauté canadienne indépendante et bilingue pour apprendre et partager les usages de Mistral AI.',
   url: SITE_URL || 'https://mistralboreal.github.io',
-  ogImage: '/favicon.svg',
+  ogImage: '/branding/mistral-boreal-logo.png',
   author: 'Communauté Mistral Boréal',
   email: '',
   socialLinks: ['https://github.com/mistralboreal'],
   verification: { google: GOOGLE_SITE_VERIFICATION, bing: BING_SITE_VERIFICATION },
   branding: {
     logo: { alt: 'Mistral Boréal' },
-    favicon: { svg: '/favicon.svg' },
+    favicon: { png: '/branding/mistral-boreal-logo.png' },
     colors: { themeColor: '#ed5929', backgroundColor: '#ffffff' },
   },
 };
