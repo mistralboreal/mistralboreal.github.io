@@ -29,7 +29,7 @@ This ZIP contains **documentation and editorial templates**, not a standalone so
 - **Vibe Code** can inspect and modify files and prepare pull requests.
 - Use prompts in `prompts/`, without transmitting secrets or confidential files.
 
-**Mistral Boreal status (October 2026):** early versions of the site were created with ChatGPT assistance. Transitioning to Vibe is planned but not complete. Every community should accurately identify the tools it actually uses.
+**Mistral Boreal operating model:** our approach to content creation and maintenance is built around the Mistral AI ecosystem, with Vibe Work (formerly Le Chat) and Vibe Code as reference assistants. Every contribution receives human review before GitHub Actions publishes it. Each community remains responsible for describing its own tools accurately.
 
 ## References
 

@@ -40,4 +40,4 @@ Mistral Boréal **n’est pas une communauté officielle de Mistral AI**. Aucune
 
 ## Notre modèle open source
 
-Ce site est construit avec **GitHub Pages, Astro + Velocity et OKF**, avec une publication bilingue automatisée. Nous partageons notre [kit communautaire réutilisable](/notre-modele/), et nous préparons une transition de sa maintenance vers Vibe Work (anciennement Le Chat) et Vibe Code. Les premières versions ont été réalisées avec l'assistance de ChatGPT; cette transition n'est pas encore terminée.
+Ce site est construit avec **GitHub Pages, Astro + Velocity et OKF**, avec une publication bilingue automatisée. **Notre modèle de création de contenu et de maintenance s'appuie sur l'écosystème Mistral AI** : Vibe Work (anciennement Le Chat) et Vibe Code sont nos outils de référence, avec supervision humaine et contrôles GitHub Actions. Nous partageons ce fonctionnement dans notre [kit communautaire réutilisable](/notre-modele/).

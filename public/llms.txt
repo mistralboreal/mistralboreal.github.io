@@ -13,4 +13,4 @@ Source and contributions: https://github.com/mistralboreal/mistralboreal.github.
 
 Editorial source: knowledge/okf, paired by translation_key. Meetups without confirmed dates must not be described as booked or open for registration. Training links lead to Mistral AI's own documentation.
 
-Maintenance provenance: initial site built with ChatGPT assistance; transition planned to Mistral Vibe Work (formerly Le Chat) and Vibe Code. Not yet exclusively operated with Mistral AI tools.
+Operating model: Mistral Boréal uses a Mistral AI-centred editorial and maintenance approach, with Vibe Work (formerly Le Chat) and Vibe Code as reference assistants, human reviews, and GitHub Actions publishing.

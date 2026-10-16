@@ -38,7 +38,7 @@ The ZIP is **a documentation and templates package, not a standalone copy of Vel
 | **OKF (knowledge/okf)** | Structured editorial source for pages, articles, events and learning materials. |
 | **FR-CA / EN-CA** | Every content item has a corresponding translation linked by translation_key. |
 | **GitHub Actions** | Checks translation pairs, runs the build and publishes automatically. |
-| **Vibe Code** | Intended tool for supervised code maintenance. |
+| **Vibe Code** | Technical assistant of reference in our maintenance model, with human review. |
 
 ## Start in six steps
 
@@ -51,11 +51,11 @@ The ZIP is **a documentation and templates package, not a standalone copy of Vel
 
 For an organization website, name the repository `<organization>.github.io`. Other project repository URLs may require changes to `site`, `base` and absolute links.
 
-## Maintaining the site with Mistral AI tools: our transition
+## Our operating model: Mistral AI
 
-**Current state (October 2026):** initial versions of the site were created and maintained with **ChatGPT assistance**. We are **planning** to transition editorial planning to **Vibe Work** (formerly Le Chat) and technical maintenance to **Vibe Code**. That transition is **not complete**, and we do not claim those tools already maintain the site exclusively.
+We have adopted a **working model built around the Mistral AI ecosystem** to support content creation and website maintenance. **Vibe Work** (formerly Le Chat) is our reference tool for editorial work, and **Vibe Code** for technical work. Our approach also relies on **human review**, change tracking on GitHub and automated publishing through GitHub Actions.
 
-The intended workflow is:
+Our workflow is organized as follows:
 
 1. Draft articles, planning notes and translations with Vibe Work.
 2. Ask Vibe Code to edit OKF content or Astro components and propose a pull request.

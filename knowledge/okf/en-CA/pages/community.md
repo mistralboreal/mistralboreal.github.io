@@ -47,6 +47,6 @@ Independence also lets us compare technologies freely. Our [Mistral AI product i
 
 ## How this site is maintained
 
-GitHub hosts the code and content, with GitHub Actions publishing changes. Initial versions were created with ChatGPT assistance. **We are preparing to move writing workflows to Vibe Work (formerly Le Chat) and code maintenance to Vibe Code.** That transition is still in progress: we do not claim that these tools already maintain the whole website.
+**Our content creation and maintenance model is built around the Mistral AI ecosystem.** Vibe Work (formerly Le Chat) and Vibe Code are our reference tools for editorial and technical assistance. Code and content are versioned on GitHub, reviewed by people and published through GitHub Actions.
 
 Our [open-source blueprint and starter kit](/en-ca/blueprint/) explain how other user groups can apply the same methods.

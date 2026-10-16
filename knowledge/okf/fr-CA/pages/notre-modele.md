@@ -37,7 +37,7 @@ Le kit documentaire n’est **pas une copie complète du thème Velocity** : il 
 | **OKF (knowledge/okf)** | Source éditoriale structurée pour les pages, articles, rencontres et ressources. |
 | **FR-CA / EN-CA** | Chaque texte possède une version jumelle, identifiée par translation_key. |
 | **GitHub Actions** | Contrôle des traductions, vérification du build et déploiement automatique. |
-| **Vibe Code** | Outil envisagé pour aider à maintenir le code sous revue humaine. |
+| **Vibe Code** | Assistant technique de référence de notre modèle de maintenance, sous revue humaine. |
 
 ## Démarrer en six étapes
 
@@ -50,11 +50,11 @@ Le kit documentaire n’est **pas une copie complète du thème Velocity** : il 
 
 Pour un site sous `<organisation>.github.io`, le dépôt doit porter exactement ce nom. Un dépôt de projet différent peut nécessiter d’adapter `site`, `base` et les chemins absolus du thème.
 
-## Maintenir le site avec les outils Mistral AI : notre transition
+## Notre modèle de travail : Mistral AI
 
-**Transparence sur l’état réel (octobre 2026)** : les premières versions de ce site ont été créées et maintenues avec l’assistance de **ChatGPT**. Nous **préparons** le transfert du travail éditorial vers **Vibe Work** (anciennement Le Chat) et de la maintenance technique vers **Vibe Code**. Ce transfert n’est **pas encore achevé**; nous ne présentons pas l’outil futur comme déjà utilisé exclusivement.
+Nous avons adopté un **modèle de travail fondé sur l’écosystème Mistral AI** pour nous accompagner dans la création de contenus et la maintenance de ce site. **Vibe Work** (anciennement Le Chat) est notre outil de référence pour les travaux éditoriaux, et **Vibe Code** pour les interventions techniques. Cette approche repose également sur la **validation humaine**, le suivi des modifications sur GitHub et la publication automatisée par GitHub Actions.
 
-Le flux de travail visé est le suivant :
+Notre processus de travail est structuré ainsi :
 
 1. Préparer les nouvelles publications, le plan et les traductions avec Vibe Work.
 2. Demander à Vibe Code de modifier les fichiers OKF ou les composants Astro et de proposer une Pull Request.

@@ -81,4 +81,4 @@ Les pages [Notre modèle](/notre-modele/) et [Our blueprint](/en-ca/blueprint/) 
 
 Le menu principal masque temporairement Formation/Learning via `nav_visible: false` tout en conservant les parcours existants. L’écosystème Mistral AI est référencé avec des liens officiels et des avertissements explicites : Mistral Boréal n’est **pas reconnu officiellement** à ce jour, même si la communauté espère l’être un jour.
 
-Les premières versions de ce dépôt ont été développées avec l’assistance de ChatGPT. La communauté prévoit de passer à Vibe Work (anciennement Le Chat) et Vibe Code pour la rédaction et la maintenance, sous revue humaine; il serait inexact de déclarer cette transition déjà terminée.
+Mistral Boréal adopte un **modèle de travail fondé sur l'écosystème Mistral AI** pour l'assistance à la création de contenus et à la maintenance : Vibe Work (anciennement Le Chat) et Vibe Code constituent les outils de référence, avec contrôle humain des Pull Requests et publication GitHub Actions.

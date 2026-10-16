@@ -30,7 +30,7 @@ Mistral Boréal n'est **pas encore** une communauté reconnue officiellement par
 
 L'ancien Le Chat a évolué vers Vibe. Les textes doivent respecter la terminologie publiée dans la documentation officielle [Vibe](https://docs.mistral.ai/fr/vibe) et éviter de présenter des informations périmées sur les produits. Les ressources de Mistral AI sont citées avec leur lien, et non copiées sans autorisation.
 
-La maintenance originelle de ce dépôt a bénéficié de ChatGPT; la transition vers Vibe Work et Vibe Code est une intention, **pas un déploiement déjà achevé**.
+Le modèle éditorial et technique adopté par Mistral Boréal s'appuie sur **l'écosystème Mistral AI** : Vibe Work (anciennement Le Chat) pour la préparation des contenus et Vibe Code pour l'assistance au code. Toute publication nécessite la revue humaine des deux langues et la validation GitHub Actions.
 
 ## Pages de navigation et réutilisation du modèle
 
