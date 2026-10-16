@@ -44,6 +44,9 @@ jobs:
       - name: Validate FR-CA / EN-CA OKF content
         run: node scripts/validate-okf.mjs
 
+      - name: Validate non-published OKF branding documents
+        run: node scripts/validate-brand-internal.mjs
+
       - name: Check Astro and TypeScript
         run: pnpm run check
 
@@ -51,6 +54,9 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: https://mistralboreal.github.io
+
+      - name: Ensure internal branding stays out of GitHub Pages
+        run: node scripts/validate-brand-internal.mjs
 
       - name: Verify French and English entry points
         run: |
