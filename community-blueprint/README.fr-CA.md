@@ -29,7 +29,7 @@ Ce ZIP contient **des guides et gabarits éditoriaux**, pas les sources intégra
 - **Vibe Code** peut explorer les fichiers, proposer des modifications et une Pull Request.
 - Utiliser les prompts du répertoire `prompts/`, sans envoyer de clés, dossiers privés ou données personnelles.
 
-**État de Mistral Boréal (octobre 2026)** : le site a d'abord été créé avec l'assistance de ChatGPT. La transition vers Vibe est envisagée mais non finalisée. Une autre communauté doit décrire ses outils selon leur usage réel.
+**Modèle de fonctionnement de Mistral Boréal** : notre approche de création de contenu et de maintenance s'appuie sur l'écosystème Mistral AI, avec Vibe Work (anciennement Le Chat) et Vibe Code comme assistants de référence. Les contributions sont toujours relues par une personne avant d'être publiées par GitHub Actions. Chaque communauté demeure responsable de décrire fidèlement ses propres outils.
 
 ## Références
 

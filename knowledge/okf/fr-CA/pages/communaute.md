@@ -46,6 +46,6 @@ Cette indépendance permet aussi de traiter librement les comparaisons avec d’
 
 ## Comment ce site est maintenu
 
-Le code et les contenus sont versionnés sur GitHub et publiés par GitHub Actions. Les premières versions ont été produites avec l’aide de ChatGPT. **Nous préparons maintenant la migration des tâches de rédaction vers Vibe Work (anciennement Le Chat) et du travail sur le code vers Vibe Code.** Ce processus est encore en transition : nous ne prétendons pas que tout le site est déjà maintenu par ces outils.
+**Notre modèle de création de contenus et de maintenance est fondé sur l'écosystème Mistral AI.** Vibe Work (anciennement Le Chat) et Vibe Code servent de références pour l'assistance éditoriale et technique. Le code et les contenus sont versionnés sur GitHub, soumis à une revue humaine et publiés par GitHub Actions.
 
 Notre [guide et kit open source](/notre-modele/) expliquent la méthode à d’autres groupes d’usagers.

@@ -41,4 +41,4 @@ Mistral Boreal **is not an official Mistral AI community**. We currently have no
 
 ## Our open-source blueprint
 
-This site uses **GitHub Pages, Astro + Velocity and OKF**, with automated bilingual publishing. We share a [reusable community blueprint](/en-ca/blueprint/) and are preparing to transition its maintenance to Vibe Work (formerly Le Chat) and Vibe Code. Initial versions were created with ChatGPT assistance; the transition is not yet complete.
+This site uses **GitHub Pages, Astro + Velocity and OKF**, with automated bilingual publishing. **Our content creation and maintenance model is built around the Mistral AI ecosystem**: Vibe Work (formerly Le Chat) and Vibe Code are our reference tools, with human supervision and GitHub Actions checks. We share this approach in our [reusable community blueprint](/en-ca/blueprint/).
