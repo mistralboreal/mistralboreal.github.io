@@ -74,3 +74,11 @@ Learning paths link to [Mistral AI documentation](https://docs.mistral.ai/) and 
 ## Licence
 
 Original Velocity template license is preserved in LICENSE. Contributions must respect licences on third-party educational resources.
+
+## Architecture duplicable et statut indépendant
+
+Les pages [Notre modèle](/notre-modele/) et [Our blueprint](/en-ca/blueprint/) décrivent comment réutiliser GitHub Pages + Astro/Velocity + OKF. Le kit de démarrage est disponible sous `/downloads/mistral-boreal-community-blueprint.zip`, et ses sources sont dans `community-blueprint/`.
+
+Le menu principal masque temporairement Formation/Learning via `nav_visible: false` tout en conservant les parcours existants. L’écosystème Mistral AI est référencé avec des liens officiels et des avertissements explicites : Mistral Boréal n’est **pas reconnu officiellement** à ce jour, même si la communauté espère l’être un jour.
+
+Les premières versions de ce dépôt ont été développées avec l’assistance de ChatGPT. La communauté prévoit de passer à Vibe Work (anciennement Le Chat) et Vibe Code pour la rédaction et la maintenance, sous revue humaine; il serait inexact de déclarer cette transition déjà terminée.

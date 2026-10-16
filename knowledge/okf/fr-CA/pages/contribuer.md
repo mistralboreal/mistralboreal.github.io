@@ -10,7 +10,7 @@ translation_key: "contribute"
 translation_status: "source"
 updated: "2026-10-15"
 nav_label: "Contribuer"
-nav_order: 5
+nav_order: 6
 hero_eyebrow: "LA COMMUNAUTÉ, C’EST VOUS"
 hero_title: "Partagez ce que vous avez appris."
 hero_lead: "Vous avez testé Mistral AI, évalué une solution de rechange ou préparé une démo? Votre expérience peut aider les autres."

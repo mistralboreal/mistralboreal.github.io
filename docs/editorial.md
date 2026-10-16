@@ -23,3 +23,17 @@ Dossier training/. Utiliser source_url pour pointer vers la source officielle de
 Every FR-CA content item must have an EN-CA counterpart with the same translation_key and id. Confirm that translation_of points to the original FR-CA file. Both entries are reviewed together. Run the validation script and Astro build before merging.
 
 Meetup invitations require confirmed dates and registration details. The bilingual site is independent from Mistral AI, and linked learning material remains the responsibility and property of the original publisher.
+
+## Statut indépendant, attribution et sources officielles
+
+Mistral Boréal n'est **pas encore** une communauté reconnue officiellement par Mistral AI et n'affirme pas avoir reçu d'accréditation, de partenariat ou de commandite. La reconnaissance reste un souhait pour l'avenir, soumis au fournisseur.
+
+L'ancien Le Chat a évolué vers Vibe. Les textes doivent respecter la terminologie publiée dans la documentation officielle [Vibe](https://docs.mistral.ai/fr/vibe) et éviter de présenter des informations périmées sur les produits. Les ressources de Mistral AI sont citées avec leur lien, et non copiées sans autorisation.
+
+La maintenance originelle de ce dépôt a bénéficié de ChatGPT; la transition vers Vibe Work et Vibe Code est une intention, **pas un déploiement déjà achevé**.
+
+## Pages de navigation et réutilisation du modèle
+
+Définir `nav_visible: false` (booléen) pour masquer une page du menu sans effacer son URL, sa paire FR-CA / EN-CA ni son contenu. Les parcours Formation / Learning sont masqués pour l'instant.
+
+La section `community-blueprint/` contient des gabarits de contenu et des prompts; `scripts/build-blueprint-zip.mjs` construit leur archive de distribution lors du `pnpm run build`. Le guide bilingue est publié sous `/notre-modele/` et `/en-ca/blueprint/`.

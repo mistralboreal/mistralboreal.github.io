@@ -152,3 +152,8 @@
   .mb-button,.mb-card { transition: none; }
   .mb-button:hover,.mb-card:hover { transform: none; }
 }
+
+/* Status disclosure remains visible on every page, including mobile. */
+.mb-trust-note { background: var(--mb-surface); color: var(--mb-text); border-bottom: 1px solid var(--mb-border); font-size: 12px; }
+.mb-trust-note .mb-container { display: flex; gap: 12px; align-items: center; justify-content: center; padding-block: 10px; flex-wrap: wrap; text-align: center; line-height: 1.55; }
+.mb-trust-note a { color: var(--mb-accent-strong); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }

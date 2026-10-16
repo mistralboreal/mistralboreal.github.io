@@ -25,7 +25,7 @@ export function alternateFor(entry: OKFEntry, all: OKFEntry[]): OKFEntry {
 
 export function navigationFor(locale: Locale, all: OKFEntry[]): OKFEntry[] {
   return all.filter((entry) => entry.data.type === 'page' &&
-    entry.data.language === locale && typeof entry.data.nav_order === 'number')
+    entry.data.language === locale && entry.data.nav_visible !== false && typeof entry.data.nav_order === 'number')
     .sort((a, b) => (a.data.nav_order ?? 100) - (b.data.nav_order ?? 100));
 }
 

@@ -11,7 +11,7 @@ translation_status: "draft"
 updated: "2026-10-15"
 translation_of: "../../fr-CA/pages/contribuer.md"
 nav_label: "Contribute"
-nav_order: 5
+nav_order: 6
 hero_eyebrow: "THIS COMMUNITY IS YOURS"
 hero_title: "Share what you have learned."
 hero_lead: "Have you tried Mistral AI, evaluated an alternative or built a demo? Your experience can help others."

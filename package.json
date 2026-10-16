@@ -1,7 +1,7 @@
 {
-  "name": "velocity",
+  "name": "mistral-boreal-community",
   "version": "1.0.0",
-  "description": "Southwell Astro Boilerplate - A production-ready starter template built on Astro 6 and Tailwind CSS v4",
+  "description": "Free bilingual Canadian community site on Astro 6, Velocity and OKF",
   "type": "module",
   "author": "Southwell Media",
   "license": "MIT",
@@ -19,15 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/southwellmedia/velocity"
+    "url": "https://github.com/mistralboreal/mistralboreal.github.io.git"
   },
-  "homepage": "https://github.com/southwellmedia/velocity#readme",
-  "bugs": {
-    "url": "https://github.com/southwellmedia/velocity/issues"
-  },
+  "homepage": "https://mistralboreal.github.io/",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/build-blueprint-zip.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",

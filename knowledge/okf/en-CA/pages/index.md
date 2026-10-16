@@ -17,8 +17,8 @@ hero_title: "Explore AI. Share what works."
 hero_lead: "An open, free and fully bilingual Canadian community to learn Mistral AI products, test ideas and compare technological approaches."
 primary_label: "Explore meetups"
 primary_url: "/en-ca/events/"
-secondary_label: "Browse learning paths"
-secondary_url: "/en-ca/learning/"
+secondary_label: "Explore Mistral AI"
+secondary_url: "/en-ca/ecosystem/"
 ---
 
 ## A community built around real-world use, not marketing
@@ -37,4 +37,8 @@ Every page, article, invitation and resource is offered in **Canadian French (FR
 
 ## Independent community
 
-Mistral Boreal is an independent user-led initiative, not an official Mistral AI website. Official educational resources are credited and linked to their original source.
+Mistral Boreal **is not an official Mistral AI community**. We currently have no official affiliation, recognition or sponsorship. We **hope to become an officially recognized community one day**, if Mistral AI is interested. We cite and link to [official Mistral AI sources](/en-ca/ecosystem/) rather than claiming to own them.
+
+## Our open-source blueprint
+
+This site uses **GitHub Pages, Astro + Velocity and OKF**, with automated bilingual publishing. We share a [reusable community blueprint](/en-ca/blueprint/) and are preparing to transition its maintenance to Vibe Work (formerly Le Chat) and Vibe Code. Initial versions were created with ChatGPT assistance; the transition is not yet complete.

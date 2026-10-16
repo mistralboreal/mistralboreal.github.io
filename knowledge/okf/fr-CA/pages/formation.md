@@ -11,6 +11,7 @@ translation_status: "source"
 updated: "2026-10-15"
 nav_label: "Formation"
 nav_order: 4
+nav_visible: false
 hero_eyebrow: "APPRENDRE · EXPLORER · PRATIQUER"
 hero_title: "Apprendre Mistral AI, un usage à la fois."
 hero_lead: "Des parcours progressifs pour débuter, expérimenter et approfondir, avec des liens explicites vers les ressources officielles de Mistral AI."

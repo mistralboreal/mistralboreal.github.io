@@ -16,8 +16,8 @@ hero_title: "L’IA se découvre. Les usages se partagent."
 hero_lead: "Une communauté canadienne, ouverte, gratuite et pleinement bilingue pour apprendre les produits de Mistral AI, tester des idées et comparer les approches technologiques."
 primary_label: "Voir les rencontres"
 primary_url: "/rencontres/"
-secondary_label: "Découvrir la formation"
-secondary_url: "/formation/"
+secondary_label: "Explorer Mistral AI"
+secondary_url: "/ecosysteme/"
 ---
 
 ## Une communauté d’usages, pas une vitrine commerciale
@@ -36,4 +36,8 @@ Chaque page, article, invitation et ressource de ce site est proposé en **fran�
 
 ## Communauté indépendante
 
-Mistral Boréal est une initiative d’usagers indépendante et n’est pas un site officiel de Mistral AI. Les contenus officiels sont référencés avec attribution et liens vers leur source.
+Mistral Boréal **n’est pas une communauté officielle de Mistral AI**. Aucune affiliation, reconnaissance ou commandite n’a été accordée à ce jour. Nous souhaitons **un jour devenir une communauté reconnue officiellement**, si Mistral AI le souhaite. Nous citons et relions les [sources officielles Mistral AI](/ecosysteme/) sans nous en attribuer la paternité.
+
+## Notre modèle open source
+
+Ce site est construit avec **GitHub Pages, Astro + Velocity et OKF**, avec une publication bilingue automatisée. Nous partageons notre [kit communautaire réutilisable](/notre-modele/), et nous préparons une transition de sa maintenance vers Vibe Work (anciennement Le Chat) et Vibe Code. Les premières versions ont été réalisées avec l'assistance de ChatGPT; cette transition n'est pas encore terminée.

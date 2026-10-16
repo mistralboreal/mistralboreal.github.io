@@ -12,7 +12,7 @@ const okf = defineCollection({
     translation_of: z.string().optional(),
     translation_status: z.enum(['source', 'draft', 'reviewed', 'validated']),
     updated: z.string(),
-    nav_label: z.string().optional(), nav_order: z.number().optional(),
+    nav_label: z.string().optional(), nav_order: z.number().optional(), nav_visible: z.boolean().optional(),
     hero_eyebrow: z.string().optional(), hero_title: z.string().optional(),
     hero_lead: z.string().optional(),
     primary_label: z.string().optional(), primary_url: z.string().optional(),
