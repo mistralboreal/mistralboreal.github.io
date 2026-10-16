@@ -1,0 +1,32 @@
+{
+  "brand": "Mistral Boréal",
+  "schema": "okf-internal-branding/v1",
+  "status": "concept-selected-working-assets",
+  "version": "0.1.0",
+  "updated": "2026-10-15",
+  "visibility": "internal-not-in-website",
+  "confidentiality": "NOT_PRIVATE_PUBLIC_GITHUB_REPOSITORY",
+  "publish_to_astro": false,
+  "include_in_blueprint": false,
+  "copyright_note": "Third-party Mistral AI official logo/guidelines are not included or licensed.",
+  "paired_documents": [
+    {
+      "translation_key": "mistral-boreal-brand-book",
+      "fr": "fr-CA/livre-de-marque.md",
+      "en": "en-CA/brand-book.md"
+    },
+    {
+      "translation_key": "mistral-boreal-brand-kit",
+      "fr": "fr-CA/kit-de-marque.md",
+      "en": "en-CA/brand-kit.md"
+    }
+  ],
+  "assets": [
+    "assets/logo-symbol.svg",
+    "assets/logo-horizontal-light.svg",
+    "assets/logo-horizontal-dark.svg",
+    "assets/mascot-peek.svg",
+    "assets/design-tokens.json"
+  ],
+  "release_policy": "Do not publish on the website or in the public community blueprint without a separately approved decision."
+}

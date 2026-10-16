@@ -1,0 +1,68 @@
+{
+  "name": "Mistral Boréal",
+  "status": "identité communautaire proposée, non officielle / proposed independent community identity",
+  "locale_source": "fr-CA",
+  "version": "0.1.0",
+  "updated": "2026-10-15",
+  "brand_independence": "No Mistral AI endorsement or official affiliation claimed",
+  "colors": {
+    "midnight": {
+      "hex": "#161626",
+      "usage": "wordmark and deep backgrounds"
+    },
+    "snow": {
+      "hex": "#FCFCF9",
+      "usage": "light background"
+    },
+    "beaver_brown": {
+      "hex": "#A9491B",
+      "usage": "pixel mascot"
+    },
+    "ochre": {
+      "hex": "#E67C18",
+      "usage": "pixel mascot"
+    },
+    "sunrise": {
+      "hex": "#FFA51B",
+      "usage": "highlights"
+    },
+    "flame": {
+      "hex": "#EF5C16",
+      "usage": "secondary accents"
+    },
+    "maple_red": {
+      "hex": "#D51232",
+      "usage": "maple leaf base"
+    },
+    "deep_red": {
+      "hex": "#B9082C",
+      "usage": "pixel shadow"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "usage": "negative leaf and reversed text"
+    }
+  },
+  "type": {
+    "display": "Outfit",
+    "body": "Manrope",
+    "code": "JetBrains Mono",
+    "fall_back": "system-ui, sans-serif"
+  },
+  "spacing": {
+    "symbol_clear_space": "at least 12.5% of symbol width",
+    "lockup_clear_space": "at least the pixel mascot ear height on all sides"
+  },
+  "minimum_recommended": {
+    "horizontal_width_px": 260,
+    "symbol_width_px": 56,
+    "symbol_if_too_small": "use simplified MB monogram instead of detailed beaver"
+  },
+  "assets": [
+    "logo-symbol.svg",
+    "logo-horizontal-light.svg",
+    "logo-horizontal-dark.svg",
+    "mascot-peek.svg"
+  ],
+  "usage": "original beaver with pixel maple leaf, not Mistral AI's official logo; independent community only"
+}

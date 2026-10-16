@@ -82,3 +82,9 @@ Les pages [Notre modèle](/notre-modele/) et [Our blueprint](/en-ca/blueprint/) 
 Le menu principal masque temporairement Formation/Learning via `nav_visible: false` tout en conservant les parcours existants. L’écosystème Mistral AI est référencé avec des liens officiels et des avertissements explicites : Mistral Boréal n’est **pas reconnu officiellement** à ce jour, même si la communauté espère l’être un jour.
 
 Mistral Boréal adopte un **modèle de travail fondé sur l'écosystème Mistral AI** pour l'assistance à la création de contenus et à la maintenance : Vibe Work (anciennement Le Chat) et Vibe Code constituent les outils de référence, avec contrôle humain des Pull Requests et publication GitHub Actions.
+
+## Ressources de marque OKF non publiées
+
+La proposition de logo castor / feuille d'érable, son kit de marque, son livre de marque et les SVG de travail sont conservés sous `knowledge/okf/internal/branding/`. Ils **ne sont pas intégrés au site Astro ni aux ressources téléchargeables du site**. Le déploiement vérifie cette séparation.
+
+Le dépôt GitHub est public : le terme « internal » signifie ici **non publié sur le site**, et non **confidentiel**. Toute diffusion sur le site ou changement de favicon nécessitera une approbation distincte.

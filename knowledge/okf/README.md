@@ -37,3 +37,9 @@ Avant de soumettre une contribution, lancer :
 ## Navigation évolutive et pages masquées
 
 Le champ facultatif `nav_visible: false` retire une page du **menu seulement**, sans supprimer son URL ni sa paire de traduction. Pour l'instant la bibliothèque « Formation / Learning » est disponible en lien direct mais cachée de la navigation principale. Les pages « Écosystème » et « Notre modèle » restent visibles dans le menu.
+
+## Identité de marque — espace OKF hors publication
+
+Le livre de marque et le kit de marque existent dans `knowledge/okf/internal/branding/`, avec deux paires de documents FR-CA / EN-CA et des actifs SVG. Ils sont **exclus volontairement** du chargeur Astro qui ne lit que `knowledge/okf/fr-CA` et `knowledge/okf/en-CA`, ainsi que des téléchargements publics.
+
+Le script `node scripts/validate-brand-internal.mjs` vérifie cette séparation avant et après la compilation. **Attention : le dépôt GitHub est public**, donc ces documents sont accessibles via GitHub malgré leur absence du site; utiliser un dépôt privé distinct si leur confidentialité est requise.
