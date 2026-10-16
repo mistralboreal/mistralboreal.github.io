@@ -63,6 +63,7 @@ jobs:
           test -s dist/notre-modele/index.html
           test -s dist/en-ca/blueprint/index.html
           test -s dist/downloads/mistral-boreal-community-blueprint.zip
+          unzip -t dist/downloads/mistral-boreal-community-blueprint.zip
           echo 'All required FR-CA and EN-CA entry points exist.'
 
       - name: Configure GitHub Pages
